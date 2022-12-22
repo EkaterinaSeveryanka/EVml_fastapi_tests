@@ -28,3 +28,12 @@ def test_predict_negative():
 
     assert response.status_code == 200
     assert json_data['label'] == 'NEGATIVE'
+
+def test_predict_negative():
+    response = client.post("/predict/",
+        json={"text": "Machine learning!"}
+    )
+    json_data = response.json() 
+
+    assert response.status_code == 200
+    assert json_data['label'] == 'NEITRAL'
