@@ -31,7 +31,7 @@ def test_predict_negative():
 
 def test_predict_neutral():
     response = client.post("/predict/",
-        json={"text": "Table"}
+        json={"text": "Machine learning is learning"}
     )
     json_data = response.json() 
 
